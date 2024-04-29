@@ -80,7 +80,7 @@ public class PolarisServiceDiscovery extends AbstractServiceDiscovery {
             metadata = new HashMap<>();
         }
         metadata.replaceAll((s, s2) -> StringUtils.defaultString(s2));
-        String version = instance.getMetadata(Consts.INSTANCE_VERSION, Consts.DEFAULT_VERSION);
+        String version = instance.getMetadata(Consts.INSTANCE_VERSION);
         Context.saveToGlobal(Consts.INSTANCE_VERSION, version);
         operator.register(
                 serviceName,
